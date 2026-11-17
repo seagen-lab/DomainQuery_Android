@@ -2,17 +2,21 @@
 
 All notable changes to DomainQ are listed here. Downloads are on the [Releases page](https://github.com/seagen-lab/DomainQuery_Android/releases).
 
-## Unreleased
+## 0.2.0 (2026-11-17)
 
 ### Added
 
 - **Expiry and availability reminders for favorites.** Alerts at 30, 7 and 1 days before expiry, when a domain has expired, and when it enters redemption or pending delete. Background recheck every 6, 12 or 24 hours. Tap a notification to open the domain.
-- **Background searches** with a progress notification and a "search finished" alert, plus a one-tap **Run in background** button.
+- **Background searches** keep running when you leave the app, with a progress notification, a "search finished" alert and a one-tap **Run in background** button. A running search also appears at the top of **History** with **View** and **Stop**.
+- **Export** results as CSV, Excel (.xlsx), PDF or a long image styled like the app; share to other apps or save to a file.
+- **Full-screen TLD manager:** search by suffix or country name, category tabs, quick sets, custom suffixes (e.g. `com.cn`) and bulk edit.
+- **Update check:** once a day (can be turned off) DomainQ looks for a newer release on GitHub and offers to download it. Version number and **Check for updates now** are under Settings → About.
+- **Light theme**, with System / Light / Dark under Settings → Display.
 - **Clipboard suggestions:** offers to search copied text when you return to the app, asked once per copy.
-- **Recent searches** shown as chips on the empty search page.
-- **Collapse all / Expand all** for result groups.
+- **Recent searches** as chips on the empty search page, and **Collapse all / Expand all** for result groups.
+- **Animations:** collapsing groups, filtering, live counters, a progress bar under the search box, tab and detail transitions.
 - **Interface size** setting.
-- French, Italian, German and Russian translations (9 languages in total).
+- French, Italian, German and Russian (9 languages in total).
 - Links to the system notification settings and app permission settings.
 
 ### Changed

@@ -35,6 +35,7 @@ DomainQ connects directly from your device to the following services. Each servi
 | **Public DNS resolvers**: Cloudflare, Google, AliDNS (DNS-over-HTTPS) | Only if you turn on **DNS precheck**. **Off by default.** | The domain name being checked |
 | **Similarweb** | When you open the detail screen of a registered domain and **Traffic estimate** is on. Can be turned off in Settings. | The domain name |
 | **Google Drive** (your own account) | Only if you turn on **Google Drive sync** | Your DomainQ data, stored in your Drive's hidden app data folder (`appDataFolder`), which is only accessible to DomainQ |
+| **GitHub** (`api.github.com`) | At most once a day when **Check for updates automatically** is on (on by default), or when you tap **Check for updates now** | A request for the latest public release of DomainQ; no personal data |
 | **Websites you choose to open** | When you tap **Preview site**, **Open on Similarweb**, or a registrar link in the Register guide | Opened in an in-app browser tab (Custom Tab) provided by your browser, subject to that browser's and website's policies |
 
 Registrar links in the Register guide (Cloudflare, Spaceship, NameSilo, Namecheap, Porkbun) are ordinary links. DomainQ does not share any data with these registrars beyond opening their page.
