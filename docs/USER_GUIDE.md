@@ -28,7 +28,7 @@ DomainQ needs Android 8.0 or later.
 Type into the search box on the **Search** tab and press search. There are two kinds of input:
 
 - **A keyword**, such as `coolapp`. DomainQ checks it against every selected TLD (`coolapp.com`, `coolapp.io`, ...).
-- **Words with spaces**, such as `nano banana`. They are treated as one name: DomainQ checks `nanobanana` and the hyphen combinations (`nano-banana`; with three words also `nano-bananapro`, `nanobanana-pro`, `nano-banana-pro`). Turn this off with **Settings > Spaces join words** to make spaces separate keywords again.
+- **Words with spaces**, such as `nano banana`. They are treated as one name: DomainQ checks `nanobanana` and the hyphen combinations (`nano-banana`; with three words also `nano-bananapro`, `nanobanana-pro`, `nano-banana-pro`). Several spaces in a row count as one. If the words include filler words, short forms are checked too, tagged **Short form**: `reference to video` also checks `reference2video`, `reference-2-video` (to → 2, for → 4) and `referencevideo`, `reference-video` (filler words such as to, for, the, of, and left out, as long as two words remain). Turn this off with **Settings > Spaces join words** to make spaces separate keywords again.
 - **One or more full domains**, such as `coolapp.io` or `example.com example.net`. Separate them with spaces, new lines or commas. The domain you typed is checked first, then the same name with your other selected TLDs (`coolapp.com`, `coolapp.ai`, ...). Turn this off with **Settings > Also try other TLDs** to check only what you typed.
 - **A web address**, such as `https://www.example.com/page?x=1`. The protocol, `www.`, port, path and parameters are removed and `example.com` is checked.
 
@@ -69,6 +69,7 @@ For keyword searches, DomainQ can also check related names. Each kind can be tur
 | Hyphen variants | `nanobanana3` → `nano-banana-3`, `nano-banana3`, `nanobanana-3` | Word boundaries come from an on-device English word list. |
 | Domain hacks | `coolapp` → `cool.app`, `coo.la` | Uses the end of the keyword as the TLD. |
 | Drop vowels | `greenapple` → `grnp.pl` | Removes vowels, then looks for a matching domain hack. |
+| Short forms | `reference to video` → `reference2video`, `referencevideo` | For words typed with spaces that include filler words (to, for, the, of, and…). Follows **Spaces join words**. |
 
 Domain hacks only use TLDs where anyone can register a second-level name. Brand TLDs (such as `.apple`) and country TLDs that only allow third-level registrations (such as `.np`) are skipped. See the [FAQ](FAQ.md#why-is-a-domain-hack-like-grnp-not-suggested).
 
@@ -108,6 +109,14 @@ For an **available** domain:
 - A **Register** guide with links to Cloudflare, Spaceship, NameSilo, Namecheap and Porkbun. Links open in a half-screen in-app browser (Custom Tab), so you can compare prices and return to DomainQ quickly.
 
 From the detail screen you can also add the domain to **Favorites**.
+
+## Exporting results
+
+Tap the export icon next to the result count to save or share the current results as **Excel (.xlsx)**, **CSV**, **PDF** or a **Long image**.
+
+- The long image is styled like the app: grouped results with their tags and a summary at the top.
+- Its footer has a QR code that opens the DomainQ download page, so whoever receives the image can install the app.
+- **Save** writes a file where you choose; **Share** sends it to another app.
 
 ## Background searches
 

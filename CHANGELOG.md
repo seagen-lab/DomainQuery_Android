@@ -2,6 +2,17 @@
 
 All notable changes to DomainQ are listed here. Downloads are on the [Releases page](https://github.com/seagen-lab/DomainQuery_Android/releases).
 
+## 0.3.1 (2026-11-18)
+
+### Added
+
+- **Short forms for phrases with filler words:** `reference to video` also checks `reference2video` / `reference-2-video` (to → 2, for → 4) and `referencevideo` / `reference-video`, tagged **Short form**.
+- **QR code on exported long images:** the footer links to the download page.
+
+### Changed
+
+- The update dialog shows release notes as plain text.
+
 ## 0.3.0 (2026-11-18)
 
 ### Added
