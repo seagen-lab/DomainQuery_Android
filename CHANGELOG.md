@@ -2,6 +2,16 @@
 
 All notable changes to DomainQ are listed here. Downloads are on the [Releases page](https://github.com/seagen-lab/DomainQuery_Android/releases).
 
+## 0.3.0 (2026-11-18)
+
+### Added
+
+- **Price comparison** in the detail screen: first-year, renewal and transfer prices from registrars' official public price lists (Porkbun, OVHcloud), sorted by renewal price, converted with ECB reference rates; choose the display currency in Settings.
+- **Words with spaces** form one name: `nano banana` checks `nanobanana` plus hyphen combinations such as `nano-banana` (setting: Spaces join words).
+- **Full domains also try other TLDs:** `coolapp.io` checks `coolapp.io` first, then `coolapp.com`, `coolapp.ai`… (setting: Also try other TLDs).
+- **Web addresses are cleaned** in the search box and clipboard suggestions: `https://www.example.com/page?x=1` becomes `example.com`.
+- **Share with friends** (Settings → About): send a ready-made message with the download link, or a branded image with a QR code, both written in the app's current language.
+
 ## 0.2.0 (2026-11-17)
 
 ### Added

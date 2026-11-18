@@ -14,6 +14,7 @@
 - **Every TLD.** All ~1,400 TLDs from the IANA root zone, plus second-level suffixes such as `com.cn` and `co.uk`, and internationalized domain names (IDN).
 - **TLD presets.** Common, Popular, Countries and All. Pick TLDs with the tune icon inside the search box; the badge shows how many are selected.
 - **Direct registry lookups.** Queries go to each registry's RDAP server (from the IANA bootstrap list), falling back to WHOIS on port 43. Requests are rate-limited per server.
+- **Flexible input.** Words with spaces become one name (`nano banana` → `nanobanana`, `nano-banana`); a full domain such as `coolapp.io` is checked first and then tried with your other TLDs; web addresses are cleaned (`https://www.example.com/page` → `example.com`).
 - **Smart variants** (each can be turned off in Settings):
   - Hyphen variants: `nanobanana3` → `nano-banana-3`, `nano-banana3`, `nanobanana-3` (uses on-device English word segmentation)
   - Domain hacks: `coolapp` → `cool.app`, `coo.la`
@@ -21,9 +22,11 @@
 - **Organized results.** Grouped by name, collapsible, with "Collapse all / Expand all" and an "Available only" filter. Tags show the registration year (or "Nd ago"), For sale, expiry countdown, Restricted, and Unknown with a reason.
 - **Domain details.** Registered, expiry and updated dates, registrar, status codes, name servers, and the raw RDAP/WHOIS response.
 - **Traffic estimate.** For registered domains, an optional Similarweb estimate: monthly visits, global and country rank, bounce rate, pages per visit, average visit duration, traffic sources and top countries.
+- **Price comparison.** First-year, renewal and transfer prices from registrars' own official public price lists (Porkbun, OVHcloud), sorted by renewal price and converted with European Central Bank reference rates. No domain names are sent.
 - **Register guide.** For available domains, quick links to Cloudflare, Spaceship, NameSilo, Namecheap and Porkbun, opened in an in-app half-screen browser.
 - **Favorites, History and recent searches.** Rerun any previous query with one tap.
-- **Adaptive layout.** Phone, landscape (navigation rail), and two-pane list + detail on foldables and tablets. Dark theme supported.
+- **Adaptive layout.** Phone, landscape (navigation rail), and two-pane list + detail on foldables and tablets. Light and dark themes.
+- **Share with friends.** A ready-made message or a QR code image, in your language.
 - **Languages.** English, French, Italian, German, Russian, Simplified Chinese, Traditional Chinese, Japanese and Korean.
 
 ## Screenshots
@@ -35,6 +38,10 @@
 | Foldable / tablet | Settings |
 | --- | --- |
 | ![Two-pane layout on a foldable](docs/screenshots/foldable.png) | ![Settings](docs/screenshots/settings.png) |
+
+| Price comparison | Share with friends |
+| --- | --- |
+| ![Registrar price comparison](docs/screenshots/price.png) | ![Share card with QR code](docs/screenshots/share.png) |
 
 ![TLD manager](docs/screenshots/tlds.png)
 

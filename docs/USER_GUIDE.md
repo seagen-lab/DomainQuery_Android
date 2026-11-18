@@ -28,7 +28,11 @@ DomainQ needs Android 8.0 or later.
 Type into the search box on the **Search** tab and press search. There are two kinds of input:
 
 - **A keyword**, such as `coolapp`. DomainQ checks it against every selected TLD (`coolapp.com`, `coolapp.io`, ...).
-- **One or more full domains**, such as `example.com example.net`. Separate them with spaces, new lines or commas. Each domain is checked as written.
+- **Words with spaces**, such as `nano banana`. They are treated as one name: DomainQ checks `nanobanana` and the hyphen combinations (`nano-banana`; with three words also `nano-bananapro`, `nanobanana-pro`, `nano-banana-pro`). Turn this off with **Settings > Spaces join words** to make spaces separate keywords again.
+- **One or more full domains**, such as `coolapp.io` or `example.com example.net`. Separate them with spaces, new lines or commas. The domain you typed is checked first, then the same name with your other selected TLDs (`coolapp.com`, `coolapp.ai`, ...). Turn this off with **Settings > Also try other TLDs** to check only what you typed.
+- **A web address**, such as `https://www.example.com/page?x=1`. The protocol, `www.`, port, path and parameters are removed and `example.com` is checked.
+
+New lines, commas and semicolons always separate entries.
 
 You can also enter:
 
@@ -110,7 +114,7 @@ From the detail screen you can also add the domain to **Favorites**.
 Large searches (for example, a keyword against All TLDs) can take a while.
 
 - Tap **Run in background** to keep the search going while you use other apps.
-- A progress notification shows how far the search has got.
+- A pinned progress notification shows how far the search has got (for example `29 / 66 checked`) and has a **Stop** button. It stays until the search ends and can't be swiped away.
 - When it finishes, you get a **Search finished** notification.
 
 Notifications require the notification permission on Android 13 and later. See [Settings > Notifications](#notifications-and-permissions).
@@ -119,11 +123,22 @@ Notifications require the notification permission on Android 13 and later. See [
 
 When you return to DomainQ and the clipboard contains something that looks like a domain or keyword, DomainQ offers to search it.
 
+- Web addresses are cleaned first: `https://www.example.com/a/b?x=1` is offered as `example.com`.
 - Each copied item is offered only once.
 - The clipboard is read only when the app comes to the foreground.
 - Turn this off with **Settings > Clipboard suggestions**.
 
 See the [Privacy Policy](PRIVACY.md#clipboard) for details.
+
+## Price comparison
+
+The detail screen shows what registrars charge for the domain's TLD, sorted by **renewal price** — the price you keep paying every year.
+
+- For an **available** domain: first-year and renewal price per registrar; the lowest renewal is highlighted. Tap a row to open that registrar's order page.
+- For a **registered** domain: transfer and renewal prices, useful when it is about to expire; in redemption, the restore price where available.
+- Prices come from the registrars' own official public price lists (currently Porkbun and OVHcloud) and are converted to your display currency with the European Central Bank's daily reference rates. They exclude taxes, coupons and premium-name pricing, so always confirm at checkout.
+- Price lists are downloaded at most once a day. No domain names are sent — only the full price lists are fetched.
+- Turn this off, or change the display currency, under **Settings**.
 
 ## Favorites and reminders
 
@@ -149,10 +164,14 @@ Rechecks run every **6, 12 or 24 hours** (set in Settings). Use **Check now** to
 | Setting | Description |
 | --- | --- |
 | Default TLDs | The TLD set selected for new searches. |
+| Spaces join words | Treat `nano banana` as one name (`nanobanana`, `nano-banana`). When off, spaces separate keywords. |
+| Also try other TLDs | For a full domain such as `coolapp.io`, also check `coolapp` with your other selected TLDs. |
 | Hyphen variants | Check hyphenated versions of keywords. |
 | Domain hacks | Check names that use part of the keyword as the TLD. |
 | Drop vowels | Check vowel-less domain hacks. |
 | Traffic estimate | Fetch Similarweb estimates on the detail screen for registered domains. |
+| Price comparison | Show registrar prices on the detail screen. On by default. |
+| Display currency | USD, EUR, CNY, GBP or JPY for price comparison. |
 | Clipboard suggestions | Offer to search copied text when you return to the app. |
 | DNS precheck (third-party) | Query Cloudflare, Google or AliDNS public DNS before the registry. Off by default; when off, only registry data is used. |
 | Concurrency | Number of parallel lookups, 1 to 8. |
@@ -175,9 +194,18 @@ Rechecks run every **6, 12 or 24 hours** (set in Settings). Use **Check now** to
 
 | Setting | Description |
 | --- | --- |
-| Language | System default, English, Français, Italiano, Deutsch, Русский, Simplified Chinese, Traditional Chinese, Japanese, 한국어. |
+| Theme | System, Light or Dark. |
+| Language | System default, English, Français, Italiano, Deutsch, Русский, Simplified Chinese, Traditional Chinese, Japanese, Korean. |
 | Interface size | Scales the whole UI, 80% to 120%. |
 | Text size | Scales text, 80% to 140%. |
+
+### About
+
+- **Share with friends** opens a sheet with two choices:
+  - **Text link:** a short message with the download link. Copy it or share it to any app.
+  - **QR code image:** a card in DomainQ's style with a QR code that opens the download page. Save it or share it.
+  Both are written in the app's current language.
+- **Version**, **Check for updates automatically** (once a day, from GitHub Releases) and **Check for updates now**.
 
 ### Data
 
@@ -193,7 +221,7 @@ Rechecks run every **6, 12 or 24 hours** (set in Settings). Use **Check now** to
 - **Landscape:** a navigation rail on the side.
 - **Foldables and tablets:** two panes, with the result list on one side and domain details on the other.
 
-DomainQ follows the system dark theme.
+Light and dark themes are available; by default DomainQ follows the system setting.
 
 ---
 
